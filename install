@@ -1,0 +1,24 @@
+#!/bin/bash
+set -e
+
+echo "Creating rofi and i3 config directories"
+mkdir -p ~/.config/rofi
+mkdir -p ~/.config/i3
+
+if [ ! -f ~/.devicerc ]; then
+    echo "No device specific config found: creating .devicerc"
+    echo "#!/bin/bash" > ~/.devicerc
+fi
+
+echo "Getting wallpaper"
+wget https://i.imgur.com/SBKjnxm.jpeg -O ~/.config/i3/nord.jpeg
+
+echo "Deploying config files"
+./deploy
+
+echo "Installing requisite packages"
+sudo add-apt-repository ppa:regolith-linux/release
+sudo apt install i3-gaps polybar feh picom rofi
+
+read -e -p "Installation done. Reboot? [y/N]" choice
+[[ "$choice" == [Yy]* ]] && reboot

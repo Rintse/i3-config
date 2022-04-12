@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for dir in */; do
+    target_dir=$(cat $dir/target_dir | envsubst)
+    cp $(find ${dir}files -mindepth 1 -printf '%p ') $target_dir
+done
+

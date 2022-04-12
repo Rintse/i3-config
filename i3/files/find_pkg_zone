@@ -1,0 +1,14 @@
+#!/bin/bash
+# Finds the pkg temp zone and writes it to a file to be referenced by polybar
+
+output_file=~/.config/i3/tzone
+
+echo "0" > $output_file # Default to 0
+
+for i in /sys/class/thermal/thermal_zone*; do 
+    if [[ $(cat $i/type) =~ .*"pkg".* ]]; then 
+        echo "${i: -1}" > $output_file; 
+        break; 
+    fi; 
+done
+
