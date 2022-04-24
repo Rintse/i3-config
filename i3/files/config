@@ -147,6 +147,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 assign [class="Steam"] $ws1
+for_window [class="Steam" title="Friends List"] resize set width 450 0
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
