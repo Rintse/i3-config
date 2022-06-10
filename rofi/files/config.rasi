@@ -1,6 +1,6 @@
 configuration {
-	width: 30;
-	lines: 6;
+	width: 40;
+	lines: 8;
 	columns: 1;
 	font: "Ubuntu Mono Nerd Font 12";
 	show-icons: true;

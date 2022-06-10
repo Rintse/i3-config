@@ -9,9 +9,9 @@
 configuration {
 
 	font: "Ubuntu Mono Nerd Font 12";
-	width: 30;
+	width: 40;
 	line-margin: 10;
-	lines: 6;
+	lines: 8;
 	columns: 1;
 
     display-ssh:    "";
