@@ -18,7 +18,10 @@ echo "Deploying config files"
 
 echo "Installing requisite packages"
 sudo add-apt-repository ppa:regolith-linux/release
-sudo apt install i3-gaps i3lock xss-lock polybar feh picom rofi
+sudo apt install i3-gaps i3lock xss-lock polybar brightnessctl feh picom rofi
+
+echo "Adding user to video group to enable brightness controls"
+sudo usermod -aG video $USER
 
 read -e -p "Installation done. Reboot? [y/N]" choice
 [[ "$choice" == [Yy]* ]] && reboot
