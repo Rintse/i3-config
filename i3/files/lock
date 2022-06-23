@@ -1,0 +1,29 @@
+#!/bin/bash
+
+color_cfg=(
+# Generic
+-c 434c5e
+--radius 100
+
+# Text
+--verif-font="UbuntuMono Nerd Font"
+--wrong-font="UbuntuMono Nerd Font"
+--verif-color=2e3440
+--wrong-color=2e3440
+
+--inside-color 4c566a 
+--ring-color d8dee9 
+--line-color 2e3440 
+
+# Typing
+--keyhl-color a3be8c 
+--bshl-color d08770 
+
+# Verifying/wrong
+--ringver-color ebcb8b 
+--insidever-color ebcb8b 
+--insidewrong-color bf616a 
+--ringwrong-color bf616a
+)
+
+i3lock "${color_cfg[@]}"

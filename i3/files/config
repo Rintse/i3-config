@@ -32,6 +32,8 @@ exec --no-startup-id nm-applet
 
 set $refresh_i3status killall -SIGUSR1 i3status
 
+bindsym $mod+Shift+p exec --no-startup-id xrandr --output eDP-1 --auto
+
 # Use amixer pulse to adjust volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -D pulse sset Master 5%+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -D pulse sset Master 5%-
@@ -131,6 +133,17 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
+
+bindsym $mod+Space+1 workspace number $ws1
+bindsym $mod+Space+2 workspace number $ws2
+bindsym $mod+Space+3 workspace number $ws3
+bindsym $mod+Space+4 workspace number $ws4
+bindsym $mod+Space+5 workspace number $ws5
+bindsym $mod+Space+6 workspace number $ws6
+bindsym $mod+Space+7 workspace number $ws7
+bindsym $mod+Space+8 workspace number $ws8
+bindsym $mod+Space+9 workspace number $ws9
+bindsym $mod+Space+0 workspace number $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -237,5 +250,5 @@ exec --no-startup-id ~/.devicerc # Input/output related
 exec --no-startup-id ~/.config/i3/find_pkg_zone # Thermal zone number for pkg
 
 # Polybar
-exec --no-startup-id polybar -r --config=~/.config/i3/polybar.conf mybar
 exec_always --no-startup-id polybar-msg cmd restart # tray breaks after reload if not for this
+exec --no-startup-id polybar -r --config=~/.config/i3/polybar.conf mybar
