@@ -11,8 +11,8 @@ color_cfg=(
 --verif-color=2e3440
 --wrong-color=2e3440
 
---inside-color 4c566a 
---ring-color d8dee9 
+--inside-color 2e3440 
+--ring-color d8dee9
 --line-color 2e3440 
 
 # Typing
