@@ -1,14 +1,6 @@
 configuration {
-	width: 40;
-	lines: 8;
-	columns: 1;
-	font: "Ubuntu Mono Nerd Font 12";
-	show-icons: true;
-	line-margin: 10;
+    matching: "fuzzy";
+    sorting-method: "fzf";
+    sort: true;
 	theme: "~/.config/rofi/nord.rasi";
-	display-window: "";
-	display-run: "";
-	display-ssh: "";
-	display-drun: "";
-	display-combi: "";
 }
