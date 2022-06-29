@@ -8,7 +8,7 @@
 
 configuration {
     font: "Ubuntu Mono Nerd Font 12";
-	width: 40;
+	width: 20;
 	line-margin: 10;
 	lines: 8;
 	columns: 1;
