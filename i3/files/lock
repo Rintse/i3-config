@@ -2,6 +2,7 @@
 
 color_cfg=(
 # Generic
+# -i ~/.config/i3/nord.jpeg --scale
 -c 434c5e
 --radius 100
 
