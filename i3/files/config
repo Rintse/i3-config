@@ -47,7 +47,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set 10%+
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 
 # Lock screen
-bindsym Control+$mod+l exec --no-startup-id ~/.config/i3/lock
+bindsym $mod+Control+p exec --no-startup-id ~/.config/i3/lock
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -148,6 +148,12 @@ bindsym $mod+Space+8 workspace number $ws8
 bindsym $mod+Space+9 workspace number $ws9
 bindsym $mod+Space+0 workspace number $ws10
 
+# mutli monitor
+bindsym $mod+Control+h move workspace to output left
+bindsym $mod+Control+j move workspace to output down
+bindsym $mod+Control+k move workspace to output up
+bindsym $mod+Control+l move workspace to output right
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
@@ -236,7 +242,7 @@ for_window [class=".*"] border pixel 0
 smart_gaps on
 smart_borders no_gaps
 smart_borders on
-gaps inner 8
+gaps inner 6
 gaps outer 1
 
 # Starts auth popup supplyer

@@ -1,6 +1,6 @@
 configuration {
     matching: "fuzzy";
-    sorting-method: "levenshtein";
-    history: true;
+    sort: true;
+    sorting-method: "fzf";
 	theme: "~/.config/rofi/nord.rasi";
 }
