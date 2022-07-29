@@ -6,20 +6,6 @@
  *
  */
 
-configuration {
-    font: "Ubuntu Mono Nerd Font 12";
-	width: 30;
-	line-margin: 10;
-	lines: 8;
-	columns: 1;
-
-    display-ssh:    "";
-    display-run:    "";
-    display-drun:   "";
-    display-window: "";
-    display-combi:  "";
-    show-icons:     true;
-}
 
 * {
 	nord0: #2e3440;
@@ -42,11 +28,16 @@ configuration {
 	nord14: #a3be8c;
 	nord15: #b48ead;
 
+    font: "Ubuntu Mono Nerd Font 12";
+    width: 40%;
+    columns: 2;
+    lines: 10;
+
     foreground:  @nord9;
     backlight:   #ccffeedd;
     background-color:  transparent;
     
-    highlight:     underline #eceff4;
+    highlight:     underline bold #eceff4;
 
     transparent: rgba(46,52,64,0);
 }
@@ -73,7 +64,7 @@ mainbox {
 message {
     color: @nord0;
     padding: 5;
-    border-color: @nord2;
+    border-color: @foreground;
     border:  0px 2px 2px 2px;
     background-color: @nord7;
 }
@@ -85,7 +76,7 @@ inputbar {
 
     border: 1px;
     border-radius:  6px 6px 0px 0px;
-    border-color: @nord2;
+    border-color: @nord3;
 }
 
 entry, prompt, case-indicator {
@@ -94,13 +85,13 @@ entry, prompt, case-indicator {
 }
 
 prompt {
-    margin: 0px 0.3em 0em 0em ;
+    margin: 0px 1em 0em 0em ;
 }
 
 listview {
     padding: 8px;
     border-radius: 0px 0px 6px 6px;
-    border-color: @nord2;
+    border-color: @nord3;
     border: 0px 1px 1px 1px;
     background-color: rgba(46,52,64,0.9);
     dynamic: false;
@@ -120,13 +111,9 @@ element selected.normal {
 	text-color: #2e3440;
 }
 
-element-text {
+element-text, element-icon {
     background-color: inherit;
     text-color:       inherit;
-}
-
-element-icon { 
-    size: 2ch ; 
 }
 
 button {

@@ -2,5 +2,25 @@ configuration {
     matching: "fuzzy";
     sort: true;
     sorting-method: "fzf";
-	theme: "~/.config/rofi/nord.rasi";
+
+    show-icons: true;
+    icon-theme: "Papirus";
+
+    ssh {
+        display-name: "  ";
+    }
+    run {
+        display-name: "  ";
+    }
+    drun {
+        display-name: "  ";
+    }
+    window {
+        display-name: " " ;
+    }
+    combi {
+        display-name: "  ";
+    }
 }
+
+@theme "~/.config/rofi/nord.rasi"
