@@ -29,8 +29,8 @@
 	nord15: #b48ead;
 
     font: "Ubuntu Mono Nerd Font 12";
-    width: 40%;
-    columns: 2;
+    width: 30%;
+    columns: 1;
     lines: 10;
 
     foreground:  @nord9;
