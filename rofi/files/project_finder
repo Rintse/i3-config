@@ -1,0 +1,18 @@
+#!/bin/bash
+
+list_gits() {
+    # Finds all .git dirs, which we will assume to be inside of repos
+    git_dirs=$(find ~ -path "*/.*" -prune -name .git)
+    # Remove home from path
+    stripped_dirs=$(for dir in $git_dirs; do echo $dir | cut -d '/' -f '4-'; done)
+    # Grab (parent) repo dirs
+    repos=$(for gitdir in $stripped_dirs; do echo $(dirname $gitdir); done)
+    echo "$repos"
+}
+
+if [ $# -eq 0 ]
+then
+    list_gits # No args, simply list options
+else
+    coproc i3-sensible-terminal --working-directory "$HOME/$1"
+fi
