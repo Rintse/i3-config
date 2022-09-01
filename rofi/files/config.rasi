@@ -1,10 +1,9 @@
 configuration {
-    matching: "fuzzy";
     sort: true;
     sorting-method: "fzf";
 
     show-icons: true;
-    icon-theme: "Papirus";
+    icon-theme: "Papirus-Dark";
 
     ssh {
         display-name: "  ";
@@ -16,10 +15,13 @@ configuration {
         display-name: "  ";
     }
     window {
-        display-name: " " ;
+        display-name: "  " ;
     }
     combi {
         display-name: "  ";
+    }
+    git {
+        display-name: " ";
     }
 }
 
