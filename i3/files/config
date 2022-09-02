@@ -2,12 +2,6 @@
 # setxkbmap -device $builtin_kb -option altwin:swap_alt_win
 set $mod Mod4
 
-# Set sleep time to 5 minutes
-exec --no-startup-id xset dpms 0 0 300
-# Network manager tray applet
-exec --no-startup-id nm-applet
-# Automatically lock the screen after inactivity
-exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/.config/i3/lock
 bindsym $mod+Control+p exec --no-startup-id ~/.config/i3/lock
 
 # Turn laptop screen back on if left off while disconnecting ext display
@@ -159,15 +153,18 @@ smart_borders on
 gaps inner 6
 gaps outer 1
 
-# Starts auth popup supplyer
-exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
-# Starts compton compositor
-exec --no-startup-id picom --config ~/.config/i3/compton.conf -b -f
-# Sets wallpaper
+# Autostarts
 exec_always --no-startup-id feh --bg-scale ~/.config/i3/nord.jpeg
-# Device specific settings
+exec_always --no-startup-id polybar-msg cmd restart
+
+exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id polybar -r --config=~/.config/i3/polybar.conf mybar
+exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/.config/i3/lock
+exec --no-startup-id picom --config ~/.config/i3/compton.conf -b -f
+exec --no-startup-id xset dpms 0 0 300
+exec --no-startup-id nm-applet
+
+# Device specific
 exec --no-startup-id ~/.devicerc # Input/output related
 exec --no-startup-id ~/.config/i3/find_pkg_zone # Thermal zone number for pkg
-# Polybar
-exec --no-startup-id polybar -r --config=~/.config/i3/polybar.conf mybar
-exec_always --no-startup-id polybar-msg cmd restart # tray breaks after reload if not for this
+
