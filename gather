@@ -4,7 +4,7 @@ for dir in */; do
     target_dir=$(cat $dir/target_dir | envsubst)
 
     for f in $(ls ${dir}files); do
-        cp $target_dir/$f ./$dir/files
+        cp -r $target_dir/$f ./$dir/files
     done
 done
 
