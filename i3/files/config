@@ -37,6 +37,8 @@ bindsym $mod+Control+space exec --no-startup-id rofi -matching "fuzzy" -show run
 bindsym $mod+Shift+Return exec --no-startup-id  rofi -modi "git:~/.config/rofi/scripts/git" -show git
 bindsym $mod+Shift+o exec --no-startup-id       rofi -modi "xrandr:~/.config/rofi/scripts/xrandr" -show xrandr
 
+bindsym $mod+period exec --no-startup-id wmfocus --fill --textcolor "#EBCB8B" -f "Ubuntu Mono Nerd Font:80"
+
 # Change focus
 bindsym $mod+h      focus left
 bindsym $mod+Left   focus left
@@ -106,8 +108,9 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 
 # For the gaming machine, set workspaces for certain applications
-assign [class="Steam"] $ws1
+assign [class="Steam"] $ws2
 for_window [class="Steam" title="Friends List"] resize set width 450 0
+for_window [class="Pavucontrol"] floating enable, resize set width 1000px height 60ppt
 
 # Reloads/restart/exit
 bindsym $mod+Shift+c reload
