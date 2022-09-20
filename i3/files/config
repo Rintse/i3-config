@@ -109,7 +109,9 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 
 # For the gaming machine, set workspaces for certain applications
 assign [class="Steam"] $ws2
-for_window [class="Steam" title="Friends List"] resize set width 450 0
+for_window [class="Steam"] floating enable
+for_window [class="Steam" title="Steam"] floating disable
+for_window [class="Steam" title="Friends List"] resize set width 350px height 60ppt
 for_window [class="Pavucontrol"] floating enable, resize set width 1000px height 60ppt
 
 # Reloads/restart/exit
