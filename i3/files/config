@@ -6,7 +6,7 @@ set $term alacritty
 bindsym $mod+Control+p exec --no-startup-id ~/.config/i3/lock
 
 # Turn laptop screen back on if left off while disconnecting ext display
-bindsym $mod+Shift+p exec --no-startup-id xrandr --output eDP-1 --auto
+bindsym $mod+Shift+p exec --no-startup-id xrandr --output eDP --auto
 
 # Use amixer pulse to control volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -D pulse sset Master 5%+
